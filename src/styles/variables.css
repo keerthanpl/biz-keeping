@@ -1,0 +1,22 @@
+:root {
+  /* Retro Register palette */
+  --paper: #efe2c6;
+  --counter: #d9c7a3;
+  --ink: #1a1510;
+  --muted: #5e5346;
+  --rule: #8a7355;
+  --stamp: #b83220;
+  --stamp-dark: #8f2416;
+  --teal: #2f5d50;
+  --teal-dark: #23463c;
+  --rust: #a65b1f;
+  --panel: #f7f0de;
+  --counter-ink: #2a241c;
+  --bevel-light: #f6ecd4;
+  --bevel-dark: #6e5a42;
+  --font-display: 'Special Elite', 'Courier New', Courier, monospace;
+  --font-sans: 'IBM Plex Sans', system-ui, sans-serif;
+  --font-mono: 'Share Tech Mono', 'IBM Plex Mono', ui-monospace, monospace;
+  --max: 1120px;
+  --nav-h: 64px;
+}
