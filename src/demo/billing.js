@@ -1,6 +1,7 @@
 /** Split GST: half CGST / half SGST from product gstRate */
-export function lineTotals(product, qty) {
-  const rate = product.gstRate ?? 5
+export function lineTotals(product, qty, gstRate) {
+  const catalogRate = product.gstRate ?? 5
+  const rate = gstRate ?? catalogRate
   const taxable = product.price * qty
   const tax = (taxable * rate) / 100
   const cgst = tax / 2
@@ -11,6 +12,7 @@ export function lineTotals(product, qty) {
     qty,
     price: product.price,
     gstRate: rate,
+    catalogRate,
     taxable,
     cgst,
     sgst,

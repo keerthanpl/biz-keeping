@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import SectionLabel from '../components/SectionLabel.jsx'
 
 const TIERS = [
@@ -8,7 +8,6 @@ const TIERS = [
 ]
 
 export default function Pricing() {
-  const [msg, setMsg] = useState('')
   return (
     <section className="section section--ink" id="pricing">
       <div className="container">
@@ -25,20 +24,10 @@ export default function Pricing() {
               <ul>
                 {t.features.map((f) => <li key={f}>{f}</li>)}
               </ul>
-              <button
-                type="button"
-                className="btn btn--primary btn--small"
-                onClick={() => {
-                  setMsg(`Trial for ${t.name} (mock)`)
-                  window.setTimeout(() => setMsg(''), 2500)
-                }}
-              >
-                Start free trial
-              </button>
+              <Link className="btn btn--primary btn--small" to="/signup">Start free trial</Link>
             </div>
           ))}
         </div>
-        {msg ? <p style={{ marginTop: '1rem', color: 'var(--paper)' }}>{msg}</p> : null}
       </div>
     </section>
   )
